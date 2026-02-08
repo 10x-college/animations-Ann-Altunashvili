@@ -32,6 +32,7 @@ body {
     line-height: 150%;
     letter-spacing: 0%;
     text-align: center;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
 .first-side {
@@ -148,7 +149,6 @@ body {
     height: 200%;
     background: conic-gradient(transparent, #AE9B84, #ffffff, transparent);
     animation: rotate-border 2s linear infinite;
-    display: none;
     z-index: -2;
 }
 
@@ -159,7 +159,6 @@ body {
     background: #1F1F1F;
     border-radius: 10px;
     z-index: -1;
-    display: none;
 }
 
 .shop-now:hover::before,
