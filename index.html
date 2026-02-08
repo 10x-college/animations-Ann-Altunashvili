@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Kumbh+Sans:wght,YOPQ@100..900,300&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Style.Loom</title>
 </head>
@@ -13,12 +18,14 @@
         <nav class="navigation">
             <div class="first-side">
                 <button>Home</button>
-                <button>Products</button>
+                <button class="products">Products</button>
             </div>
-            <h1>Style.Loom</h1>
+            <div class="header-logo">
+                <img src="./assets/first-logo.png" alt="logo">
+            </div>
             <div class="last-side">
-                <button><img src="./assets/shop-button.png" alt="shop-button"></button>
-                <button>Contact</button>
+                <button class="shop-icon"><img src="./assets/shop-button.png" alt="shop-button"></button>
+                <button class="contacts">Contact</button>
             </div>
         </nav>
     </header>
@@ -26,18 +33,21 @@
     <main>
         <section class="hero-container">
             <div class="hero-photo">
-                <img src="./assets/main-photo.jpg" alt="hero-photo">
+                <img src="./assets/main-photo.png" alt="hero-photo">
             </div>
-            <button>Shop Now <img src="./assets/arrow.png" alt="arrow" /></button>
+            <button class="shop-now">Shop Now <img src="./assets/little-arrow.png" alt="arrow" /></button>
             <div class="hero-container-content">
                 <div class="left-hero-box">
-                    <button>All</button>
-                    <button>Mens</button>
-                    <button>Womens</button>
-                    <button>Kids</button>
-                    <h2>Elevate Your Style with StyleLoom</h2>
-                    <p>Explore a world of fashion at StyleLoom, where trends meet affordability. Immerse yourself in the
-                        latest styles and seize exclusive promotions.</p>
+                    <div class="left-buttons">
+                        <button>All</button>
+                        <button>Mens</button>
+                        <button>Womens</button>
+                        <button>Kids</button>
+                    </div>
+                    <h2>
+                        ELEVATE YOUR STYLE WITH STYLELOOM</h2>
+                    <p>Explore a world of fashion at StyleLoom, where trends meet affordability. <br>
+                        Immerse yourself in the latest styles and seize exclusive promotions.</p>
                 </div>
                 <div class="right-hero-box">
                     <div class="hero-card-1">
@@ -349,10 +359,10 @@
 
     <footer class="footer-container">
         <p>© 2024 StyleLoom. All rights reserved.</p>
-      <div>
-        <a class="terms">Terms & Conditions</a>
-        <a>Privacy Policy</a>
-      </div>
+        <div>
+            <a class="terms">Terms & Conditions</a>
+            <a>Privacy Policy</a>
+        </div>
     </footer>
 </body>
 

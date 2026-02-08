@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: black;
+    margin: 0 162px;
+}
+
+/*navigation container*/
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    height: 123px;
+    border-bottom: 1px dashed #262626;
+}
+
+.first-side button,
+.last-side button {
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+}
+
+.first-side {
+    display: flex;
+    gap: 14px;
+}
+
+.first-side button {
+    background: black;
+    color: #FFFFFF;
+    border: 1px dashed #262626;
+    padding: 18px 30px;
+    min-width: 104px;
+    height: 63px;
+    font-weight: 400;
+}
+
+.first-side button:hover {
+    background: #1A1A1A;
+    border-style: solid;
+}
+
+.first-side button.products {
+    width: 135px;
+}
+
+.last-side {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.last-side .shop-icon {
+    width: 60px;
+    height: 60px;
+    background: #1A1A1A;
+    border-radius: 12px;
+}
+
+.last-side .shop-icon:hover {
+    background: #262626;
+    border: 1px solid #333;
+}
+
+.last-side img {
+    width: 24px;
+    height: 24px;
+    gap: 10px;
+}
+
+.last-side .contacts {
+    width: 136px;
+    height: 63px;
+    background: #AE9B84;
+    color: #0F0F0F;
+    font-weight: 500;
+    padding: 18px 30px;
+}
+
+.last-side .contacts:hover {
+    background: #DCCFBE;
+}
+
+
+/*hero-container*/
+
+.hero-container {
+    margin-top: 60px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    border: 2px dashed #262626;
+    border-radius: 20px;
+}
+
+.hero-photo img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    height: 660px;
+    border-radius: 20px 20px 0 0;
+}
+
+.shop-now {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 159px;
+    height: 63px;
+    border: 1px dashed #404040;
+    background: #1F1F1F;
+    color: white;
+    padding: 18px 20px;
+    gap: 4px;
+    border-radius: 12px;
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    position: absolute;
+    cursor: pointer;
+    top: 628px;
+    right: 518px;
+    cursor: pointer;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.shop-now::before {
+    content: '';
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(transparent, #AE9B84, #ffffff, transparent);
+    animation: rotate-border 2s linear infinite;
+    display: none;
+    z-index: -2;
+}
+
+.shop-now::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    background: #1F1F1F;
+    border-radius: 10px;
+    z-index: -1;
+    display: none;
+}
+
+.shop-now:hover::before,
+.shop-now:hover::after {
+    display: block;
+}
+
+/*ბორდერის ბრუნვისთვის საჭირო ანიმაცია*/
+@keyframes rotate-border {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.hero-container-content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 40px;
+}
+
+
+.left-hero-box,
+.right-hero-box {
+    flex: 1;
+    /*ორივე მხარემ რომ დაიკავოს თანაბარი ნაწილი კონტეინერი*/
+    width: 50%;
+}
+
+.right-hero-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-hero-box {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    width: 50%;
+    gap: 20px;
+    padding: 30px 80px 80px 80px;
+    border-right: 2px dashed #262626;
+}
+
+.left-buttons {
+    display: flex;
+    gap: 14px;
+}
+
+.left-buttons button {
+    font-family: Roboto Mono;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    text-align: center;
+    color: #B3B3B2;
+    border: 2px dashed #262626;
+    border-radius: 12px;
+    padding: 6px 18px;
+    gap: 24px;
+    background: black;
+    transition:
+        background-color 0.2s linear 0s,
+        border-style 0.2s linear 0s;
+}
+
+.left-buttons button:hover {
+    background: #1A1A1A;
+    border-style: solid;
+    border-color: #AE9B84;
+    transform: scale(1.1);
+
+}
+
+.left-hero-box h2 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-transform: uppercase;
+    color: white;
+}
+
+.left-hero-box p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #676665;
+}
+
+.right-hero-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100%;
+    padding: 40px 80px 80px 20px;
+}
+
+.right-hero-box .hero-card-1 h3,
+.right-hero-box .hero-card-2 h3,
+.right-hero-box .hero-card-3 h3,
+.right-hero-box .hero-card-4 h3 {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 50px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: white;
+}
+
+.right-hero-box .hero-card-1 p,
+.right-hero-box .hero-card-2 p,
+.right-hero-box .hero-card-3 p,
+.right-hero-box .hero-card-4 p {
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    letter-spacing: 0%;
+    color: #676665;
+}
