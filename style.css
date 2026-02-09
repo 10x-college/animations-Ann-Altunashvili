@@ -613,6 +613,7 @@ transform: scale(1.07);
     height: 200%;
     background: conic-gradient(transparent, #AE9B84, #ffffff, transparent);
     animation: rotate-border 3s linear infinite;
+    animation-name: rotate-border;
 }
 
 .shop-now-btn::after {
