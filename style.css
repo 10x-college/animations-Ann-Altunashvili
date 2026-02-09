@@ -547,6 +547,12 @@ body {
     border-top-right-radius: 50px;
     object-fit: cover;
     margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.2s linear;
+}
+
+.cloth:hover {
+transform: scale(1.07);
 }
 
 .collection-card-1>div {
@@ -782,6 +788,7 @@ body {
     font-size: 20px;
     line-height: 140%;
     cursor: pointer;
+    transition: all 0.2s linear;
 }
 
 .questions-answers h3:hover {
@@ -907,6 +914,9 @@ body {
     cursor: pointer;
 }
 
+.nav-list a{
+    transition: all 0.2s linear;
+}
 .nav-list a:hover {
     color: #DCCFBE;
     transform: scale(1.15);
@@ -960,6 +970,7 @@ span {
 
 .terms a {
     cursor: pointer;
+    transition: all 0.3s linear;
 }
 
 .terms a:hover {
